@@ -24,13 +24,21 @@ function shuffle(array) {
 
     return array;
 }
+
 //建立卡牌数组
 const cardIcon = ['fa-diamond', 'fa-paper-plane-o', 'fa-anchor', 'fa-bolt', 'fa-cube', 'fa-anchor', 'fa-leaf',
 				 'fa-bicycle', 'fa-diamond', 'fa-bomb', 'fa-leaf', 'fa-bomb', 'fa-bolt', 'fa-bicycle',
 				 'fa-paper-plane-o', 'fa-cube'];
+
 //洗牌
 shuffle(cardIcon);
 
+//将洗好顺序写入卡牌
+const allIcon = document.querySelectorAll('.icon');
+for (let i = 0; i < ardIcon.length; i++) {
+	allIcon[i].className = 'icon fa';
+	allIcon[i].classList.add(cardIcon[i]);
+}
 
 /*
  * 设置一张卡片的事件监听器。 如果该卡片被点击：
