@@ -24,6 +24,12 @@ function shuffle(array) {
 
     return array;
 }
+//建立卡牌数组
+const cardIcon = ['fa-diamond', 'fa-paper-plane-o', 'fa-anchor', 'fa-bolt', 'fa-cube', 'fa-anchor', 'fa-leaf',
+				 'fa-bicycle', 'fa-diamond', 'fa-bomb', 'fa-leaf', 'fa-bomb', 'fa-bolt', 'fa-bicycle',
+				 'fa-paper-plane-o', 'fa-cube'];
+//洗牌
+shuffle(cardIcon);
 
 
 /*
