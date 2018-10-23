@@ -30,6 +30,9 @@ const cardIcon = ['fa-diamond', 'fa-paper-plane-o', 'fa-anchor', 'fa-bolt', 'fa-
 				 'fa-bicycle', 'fa-diamond', 'fa-bomb', 'fa-leaf', 'fa-bomb', 'fa-bolt', 'fa-bicycle',
 				 'fa-paper-plane-o', 'fa-cube'];
 
+//建立状态为 “open” 的 *数组theOpenedCard
+const theOpenedCard = [];
+
 //洗牌
 shuffle(cardIcon);
 
@@ -38,6 +41,17 @@ const allIcon = document.querySelectorAll('.icon');
 for (let i = 0; i < ardIcon.length; i++) {
 	allIcon[i].className = 'icon fa';
 	allIcon[i].classList.add(cardIcon[i]);
+}
+
+//显示卡片的符号
+function cardShow(evt) {
+	 evt.target.classList.add('open', 'show');
+}
+
+//将被点击的卡片添加到状态为 “open” 的 *数组* 中
+function addOpenedCard(evt) {
+	const theIconOpened = evt.target.firstElementChild.className;
+	theOpenedCard.push(theIconOpened);
 }
 
 /*
