@@ -31,7 +31,7 @@ const cardIcon = ['fa-diamond', 'fa-paper-plane-o', 'fa-anchor', 'fa-bolt', 'fa-
 				 'fa-paper-plane-o', 'fa-cube'];
 
 //建立状态为 “open” 的 *数组theOpenedCard
-const theOpenedCard = [];
+const theOpenedCards = [];
 
 //洗牌
 shuffle(cardIcon);
@@ -50,8 +50,8 @@ function cardShow(evt) {
 
 //将被点击的卡片添加到状态为 “open” 的 *数组* 中
 function addOpenedCard(evt) {
-	const theIconOpened = evt.target.firstElementChild.className;
-	theOpenedCard.push(theIconOpened);
+	const theOpenedCard = evt.target.firstElementChild.className;
+	theOpenedCards.push(theOpenedCard);
 }
 
 /*
